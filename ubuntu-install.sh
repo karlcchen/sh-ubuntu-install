@@ -1,5 +1,12 @@
 #!/bin/bash
 #
+# ubuntu-install.sh
+#
+if [ "$1" != "" ] ; then 
+    echo -e "\n INFO: use 'apt install' options: $1\n"
+    export APT_OPT="$1"
+fi 
+#
 export CNT_FILE="./.cnt-installed"
 echo "0" >${CNT_FILE}
 ./apt-install.sh net-tools build-essential git python-dev python-pip python-virtualenv python-numpy python-matplotlib flex bison libpcap-dev libnet1-dev openssh-server | tee install.log1
