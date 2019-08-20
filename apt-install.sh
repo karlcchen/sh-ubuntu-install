@@ -9,7 +9,7 @@ N_INSTALLED=`cat ${CNT_FILE}`
 while [ "$1" != "" ] ; 
 do
    echo -e "\n INFO: LOOP:#${N_INSTALLED} installing $1\n"
-   sudo apt install $1 ${APT_OPT}
+   sudo apt-get install $1 ${APT_OPT}
    if [ $? -ne 0 ] ; then 
         echo "\nERROR: LOOP:#{N_INSTALLED} installing $1 failed!\n"
         echo "${N_INSTALLED}" >${CNT_FILE} 
