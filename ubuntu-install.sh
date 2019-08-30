@@ -17,7 +17,11 @@ echo "0" >${CNT_FILE}
 ./apt-install.sh libwine libx86-1 pm-utils powerwake python3-pip python3-setuptools schroot schroot-common uck ubuntu-gnome-desktop vbetool vnc4server xvnc4viewer xclip rpm nano | tee install.log6
 # for 'bootiso' script, install wimtools
 # bootiso write iso to usb stick as bootable disk 
+<<<<<<< HEAD
 ./apt-install.sh wimtools xinetd tftpd tftp gitk gparted dos2unix pv dialog | tee install.log7
+=======
+./apt-install.sh wimtools xinetd tftpd tftp gitk gparted dos2unix pv btrfs-progs | tee install.log7
+>>>>>>> 5bee523e06c81aeb2cb1fc7f61165dfa39b0f3e6
 #
 N_INSTALLED=`cat ${CNT_FILE}`
 echo -e "\n INFO: ${N_INSTALLED} packages checked or installed\n" 
