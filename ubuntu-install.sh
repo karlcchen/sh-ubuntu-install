@@ -18,6 +18,7 @@ echo "0" >${CNT_FILE}
 # for 'bootiso' script, install wimtools
 # bootiso write iso to usb stick as bootable disk 
 ./apt-install.sh wimtools xinetd tftpd tftp gitk gparted dos2unix pv btrfs-progs stressapptest | tee install.log7
+./apt-install.sh bmon make libconfuse-dev libnl-3-dev libnl-route-3-dev libncurses-dev pkg-config dh-autoreconf | tee install.log8
 #
 N_INSTALLED=`cat ${CNT_FILE}`
 echo -e "\n INFO: ${N_INSTALLED} packages checked or installed\n" 
