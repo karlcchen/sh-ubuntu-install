@@ -1,5 +1,6 @@
 #!/bin/bash
-KGHUB=https://github.com/karlcchen
+#KGHUB=https://github.com/karlcchen
+KGHUB=ssh://git@github.com/karlcchen
 while [ "$1" != "" ] ; 
 do 
 	git clone ${KGHUB}/${1}
