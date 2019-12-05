@@ -22,7 +22,7 @@ echo "0" >${CNT_FILE}
 
 # for compiling uboot image 
 # for trusted uboot images: libmbedtls-dev libconfig-dev 
-./apt-install.sh install snap htop u-boot-tools libmbedtls-dev libconfig-dev | tee install.log9
+./apt-install.sh snap htop u-boot-tools libmbedtls-dev libconfig-dev | tee install.log9
 pip3 install numpy
 pip3 install elftools
 pip3 install pyelftools
