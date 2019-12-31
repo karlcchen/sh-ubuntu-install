@@ -27,7 +27,9 @@ pip3 install numpy
 pip3 install elftools
 pip3 install pyelftools
 pip  install pycrypto
-
+# for GadgEon 
+pip  install toml
+pip  install pythondialog
 
 #
 N_INSTALLED=`cat ${CNT_FILE}`
