@@ -19,10 +19,11 @@ echo "0" >${CNT_FILE}
 # bootiso write iso to usb stick as bootable disk 
 ./apt-install.sh wimtools xinetd tftpd tftp gitk gparted dos2unix pv btrfs-progs stressapptest htop snapd | tee install.log7
 ./apt-install.sh bmon make libconfuse-dev libnl-3-dev libnl-route-3-dev libncurses-dev pkg-config dh-autoreconf | tee install.log8
-
+# for testing ntp
+./apt-install.sh ntpdate ntpsec-ntpdate | tee install.log9
 # for compiling uboot image 
 # for trusted uboot images: libmbedtls-dev libconfig-dev 
-./apt-install.sh snap htop u-boot-tools libmbedtls-dev libconfig-dev | tee install.log9
+./apt-install.sh snap htop u-boot-tools libmbedtls-dev libconfig-dev | tee install.log10
 pip3 install numpy
 pip3 install elftools
 pip3 install pyelftools
