@@ -24,10 +24,18 @@ echo "0" >${CNT_FILE}
 # for compiling uboot image 
 # for trusted uboot images: libmbedtls-dev libconfig-dev 
 ./apt-install.sh snap htop u-boot-tools libmbedtls-dev libconfig-dev | tee install.log10
-pip3 install numpy
-pip3 install elftools
+
+# upgrade python install tools
+pip install --upgrade setuptools.
+
+#pip3 install numpy
+pip install numpy
+#pip3 install elftools
+pip install elftools
+
 pip3 install pyelftools
 pip  install pycrypto
+
 # for GadgEon 
 pip  install toml
 pip  install pythondialog
