@@ -17,13 +17,16 @@ echo "0" >${CNT_FILE}
 ./apt-install.sh libwine libx86-1 pm-utils powerwake python3-pip python3-setuptools schroot schroot-common uck ubuntu-gnome-desktop vbetool vnc4server xvnc4viewer xclip rpm nano | tee install.log6
 # for 'bootiso' script, install wimtools
 # bootiso write iso to usb stick as bootable disk 
-./apt-install.sh wimtools xinetd tftpd tftp gitk gparted dos2unix pv btrfs-progs stressapptest htop snapd | tee install.log7
+./apt-install.sh wimtools xinetd tftpd tftp gitk gparted dos2unix pv btrfs-progs stressapptest htop snapd cmake | tee install.log7
 ./apt-install.sh bmon make libconfuse-dev libnl-3-dev libnl-route-3-dev libncurses-dev pkg-config dh-autoreconf | tee install.log8
 # for testing ntp
 ./apt-install.sh ntp ntpdate ntpsec-ntpdate | tee install.log9
 # for compiling uboot image 
 # for trusted uboot images: libmbedtls-dev libconfig-dev 
 ./apt-install.sh snap htop u-boot-tools libmbedtls-dev libconfig-dev | tee install.log10
+
+# for java run time 
+./apt-install default-jre | tee install.log11
 
 # upgrade python install tools
 pip install --upgrade setuptools.
