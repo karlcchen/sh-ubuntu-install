@@ -26,7 +26,7 @@ echo "0" >${CNT_FILE}
 ./apt-install.sh snap htop u-boot-tools libmbedtls-dev libconfig-dev | tee install.log10
 
 # for java run time 
-./apt-install default-jre | tee install.log11
+./apt-install.sh default-jre expect sshpass | tee install.log11
 
 # upgrade python install tools
 pip install --upgrade setuptools.
