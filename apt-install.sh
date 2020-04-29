@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#APT_OPT="-y"
+APT_OPT="-y"
 #
 if [ "${CNT_FILE}" = "" ] ; then 
     CNT_FILE="./.cnt-installed"
