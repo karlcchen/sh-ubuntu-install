@@ -44,27 +44,27 @@ if [ $? -ne 0 ] ; then
 fi 
 
 # upgrade python install tools
-pip install --upgrade setuptools.
+pip  install --upgrade setuptools.
 pip3 install --upgrade setuptools.
 
-pip install numpy
+pip  install numpy
 pip3 install numpy
 
-pip install elftools
+pip  install elftools
 pip3 install elftools
 
-pip nstall pyelftools
-pip3 nstall pyelftools
+pip  install pyelftools
+pip3 install pyelftools
 
-pip install pycrypto
+pip  install pycrypto
 pip3 install pycrypto
 
 # for GadgEon 
 pip2 install toml
-pip3  install toml
+pip3 install toml
 
 pip  install pythondialog
-pip3  install pythondialog
+pip3 install pythondialog
 
 #
 N_INSTALLED=`cat ${CNT_FILE}`
