@@ -30,7 +30,7 @@ echo "0" >${CNT_FILE}
 ./apt-install.sh snap htop u-boot-tools libmbedtls-dev libconfig-dev | tee install.log10
 
 # for java run time 
-./apt-install.sh default-jre expect sshpass | tee install.log11
+./apt-install.sh default-jre expect sshpass tlp | tee install.log11
 
 ./apt-install.sh python  python-setuptools              python-dev  python-virtualenv  python-numpy  python-matplotlib  python-bs4  python-pycurl  | tee install.log12
 ./apt-install.sh python3 python3-setuptools python3-pip python3-dev python3-virtualenv python3-numpy python3-matplotlib python3-bs4 python3-pycurl | tee install.log13
