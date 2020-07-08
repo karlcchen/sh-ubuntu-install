@@ -35,6 +35,17 @@ echo "0" >${CNT_FILE}
 ./apt-install.sh python  python-setuptools              python-dev  python-virtualenv  python-numpy  python-matplotlib  python-bs4  python-pycurl  | tee install.log12
 ./apt-install.sh python3 python3-setuptools python3-pip python3-dev python3-virtualenv python3-numpy python3-matplotlib python3-bs4 python3-pycurl | tee install.log13
 
+# fd, the linux "find" alternative 
+# https://linoxide.com/linux-how-to/fd-alternative-linux-find-command/
+# for fd commnand, also called fd-find
+# add ~/.cargo/bin to PATH env
+#
+# Note: siince I already installed rust
+# no need to installed rustup: "curl https://sh.rustup.rs -sSf | sh"
+#
+./apt-install.sh cargo 
+cargo install fd-find
+
 # for ubunt 20.04, python2 "pip" not available by default 
 sudo apt install python-pip
 if [ $? -ne 0 ] ; then 
