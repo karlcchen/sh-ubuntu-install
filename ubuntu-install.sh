@@ -44,7 +44,7 @@ echo "0" >${CNT_FILE}
 # no need to installed rustup: "curl https://sh.rustup.rs -sSf | sh"
 #
 ./apt-install.sh cargo 
-cargo install fd-find
+sudo cargo install fd-find
 
 # for ubunt 20.04, python2 "pip" not available by default 
 sudo apt install python-pip
@@ -54,28 +54,8 @@ if [ $? -ne 0 ] ; then
     sudo python2 get-pip.py
 fi 
 
-# upgrade python install tools
-pip  install --upgrade setuptools.
-pip3 install --upgrade setuptools.
-
-pip  install numpy
-pip3 install numpy
-
-pip  install elftools
-pip3 install elftools
-
-pip  install pyelftools
-pip3 install pyelftools
-
-pip  install pycrypto
-pip3 install pycrypto
-
-# for GadgEon 
-pip2 install toml
-pip3 install toml
-
-pip  install pythondialog
-pip3 install pythondialog
+./pip-install.sh sudo 
+./pip-install.sh 
 
 #
 N_INSTALLED=`cat ${CNT_FILE}`
