@@ -43,7 +43,7 @@ echo "0" >${CNT_FILE}
 # Note: siince I already installed rust
 # no need to installed rustup: "curl https://sh.rustup.rs -sSf | sh"
 #
-./apt-install.sh cargo 
+./apt-install.sh cargo cifs-utils libcanberra-gtk-module
 sudo cargo install fd-find
 
 # for ubunt 20.04, python2 "pip" not available by default 
