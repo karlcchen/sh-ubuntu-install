@@ -35,11 +35,6 @@ if [ $? -ne 0 ] ; then
     printf '\nERROR-4: mkdir %s failed!\n' "gg"
     exit 4 
 fi 
-cd gg
-if [ $? -ne 0 ] ; then 
-    printf '\nERROR-5: cd %s failed!\n' "gg"
-    exit 5 
-fi 
 
 git clone git@sonicgit.eng.sonicwall.com:kchen/gg.git
 if [ $? -ne 0 ] ; then 
