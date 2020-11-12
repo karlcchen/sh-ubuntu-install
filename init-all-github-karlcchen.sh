@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+# init-all-github-karlcchen.sh
+#
 CUR_DIR=`pwd`
 cd
 
@@ -11,8 +13,24 @@ fi
 
 ${CUR_DIR}/git-clone-karlcchen.sh sh-system-adm sh-glp2 sh-uboot sh-soniccorex sh-bitbake sh-lpower etc bin kchen test-uboot-cmd 
 
+#
+# gg is not from github
+#
 cd
 mkdir gg 
+if [ $? -ne 0 ] ; then 
+    printf '\nERROR-2: mkdir %s failed!\n' "gg"
+    exit 2 
+fi 
 cd gg
+if [ $? -ne 0 ] ; then 
+    printf '\nERROR-3: cd %s failed!\n' "gg"
+    exit 3 
+fi 
+
 git clone git@sonicgit.eng.sonicwall.com:kchen/gg.git
+if [ $? -ne 0 ] ; then 
+    printf '\nERROR-4: %s failed!\n' "git clone git@sonicgit.eng.sonicwall.com:kchen/gg.git"
+    exit 4 
+fi 
 
