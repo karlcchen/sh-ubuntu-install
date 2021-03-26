@@ -44,7 +44,7 @@ echo "0" >${CNT_FILE}
 # * pipetty: makes a program think its stdout and stderr are connected to a
 #   terminal; use as a prefix: "pipetty dmesg|tee"
 #
-./apt-install.sh libjansson-dev xmlstarlet colorized-logs | tee install.log14
+./apt-install.sh libjansson-dev xsltproc xmlstarlet colorized-logs | tee install.log14
 
 # fd, the linux "find" alternative 
 # https://linoxide.com/linux-how-to/fd-alternative-linux-find-command/
