@@ -1,5 +1,15 @@
 # ubuntu-install
 
+# requirements
+# - copy dest ".ssh" and its sub-dirs
+# - install: openssh-server 
+# - install sonicwall linux vpn 
+# - run "startctui", do "eidt config: with your name "kchen" and server name "connect2.sonicwall.com" 
+# after successful installation and login to vpn, make sure you can "ping sonicgit"  
+
+
+
+
 # step 1, for example, remote machine ipaddr is 10.180.200.176
 src:> scp git-clone-karlcchen.sh username@10.180.200.176
 

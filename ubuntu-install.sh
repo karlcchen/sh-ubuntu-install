@@ -44,7 +44,7 @@ echo "0" >${CNT_FILE}
 # * pipetty: makes a program think its stdout and stderr are connected to a
 #   terminal; use as a prefix: "pipetty dmesg|tee"
 #
-./apt-install.sh libjansson-dev xsltproc xmlstarlet colorized-logs | tee install.log14
+./apt-install.sh libjansson-dev xsltproc xmlstarlet colorized-logs jq | tee install.log14
 
 # fd, the linux "find" alternative 
 # https://linoxide.com/linux-how-to/fd-alternative-linux-find-command/
@@ -58,7 +58,7 @@ echo "0" >${CNT_FILE}
 sudo cargo install fd-find
 
 # for ubunt 20.04, python2 "pip" not available by default 
-sudo apt install python-pip
+sudo apt install python-pip -y
 if [ $? -ne 0 ] ; then 
     sudo add-apt-repository universe
     curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
